@@ -6,13 +6,12 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [
-    vue(),
-    vueDevTools(),
-  ],
+  base: '/INNO_AGRI_DEMO/',
+  plugins: [vue(), vueDevTools()],
   resolve: {
+    extensions: ['.js', '.vue', '.json'],
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
 })

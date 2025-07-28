@@ -1,9 +1,15 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+import PartOne from '@/components/Homepage/Part1One.vue'
+import PartTwo from '@/components/Homepage/Part2Two.vue'
 </script>
-
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <div>
+    <PartOne />
+    <PartTwo />
+
+  </div>
 </template>
+<script>
+export default {}
+</script>
+<style scoped></style>

@@ -1,0 +1,140 @@
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --vt-c-accent-500: #EFBC00;
+  --vt-c-accent-400: #F2C933;
+  --vt-c-accent-300: #F4D254;
+  --vt-c-accent-200: #F8E08A;
+  --vt-c-accent-100: #FAEAB0;
+  --vt-c-accent-50: #FDF8E6;
+
+
+  --vt-c-green-900: #006f1c;
+  --vt-c-green-800: #38922e;
+  --vt-c-green-700: #4ca638;
+  --vt-c-green-600: #61ba42;
+  --vt-c-green-500: #70cb4a;
+  --vt-c-green-400: #86d366;
+  --vt-c-green-300: #9ddb82;
+  --vt-c-green-200: #bae6a7;
+  --vt-c-green-100: #d5f0c9;
+  --vt-c-green-50: #eef9e9;
+
+  --vt-c-delicious_dill-900: #006d00;
+  --vt-c-delicious_dill-800: #3f8e00;
+  --vt-c-delicious_dill-700: #57a200;
+  --vt-c-delicious_dill-600: #6db600;
+  --vt-c-delicious_dill-500: #7dc600;
+  --vt-c-delicious_dill-400: #92cf3f;
+  --vt-c-delicious_dill-300: #a7d766;
+  --vt-c-delicious_dill-200: #c1e394;
+  --vt-c-delicious_dill-100: #daeebe;
+  --vt-c-delicious_dill-50: #f0f8e5;
+
+  --vt-c-neutral-900: #042700;
+  --vt-c-neutral-800: #333333;
+  --vt-c-neutral-700: #5c5c5c;
+  --vt-c-neutral-600: #858585;
+  --vt-c-neutral-500: #a3a3a3;
+  --vt-c-neutral-400: #c2c2c2;
+  --vt-c-neutral-300: #d6d6d6;
+  --vt-c-neutral-200: #ebebeb;
+  --vt-c-neutral-100: #f0f0f0;
+  --vt-c-neutral-50: #f5f5f5;
+
+  --vt-c-white: #ffffff;
+  --vt-c-white-soft: #f8f8f8;
+  --vt-c-white-mute: #f2f2f2;
+
+  --vt-c-black: #181818;
+  --vt-c-black-soft: #222222;
+  --vt-c-black-mute: #282828;
+
+  --vt-c-indigo: #2c3e50;
+
+  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
+  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
+  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
+  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+
+  --vt-c-text-light-1: var(--vt-c-indigo);
+  --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
+  --vt-c-text-dark-1: var(--vt-c-white);
+  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+
+  --opacity-level: 40%;
+}
+
+/* semantic color variables for this project */
+:root {
+  --color-main: var(--vt-c-green-900);
+  --color-main-800: var(--vt-c-green-800);
+  --color-main-700: var(--vt-c-green-700);
+  --color-main-600: var(--vt-c-green-600);
+  --color-main-500: var(--vt-c-green-500);
+  --color-main-400: var(--vt-c-green-400);
+  --color-main-300: var(--vt-c-green-300);
+  --color-main-200: var(--vt-c-green-200);
+  --color-main-100: var(--vt-c-green-100);
+  --color-main-50: var(--vt-c-green-50);
+
+  --color-secondary: var(--vt-c-delicious_dill-500);
+  --color-secondary-800: var(--vt-c-delicious_dill-800);
+  --color-secondary-700: var(--vt-c-delicious_dill-700);
+  --color-secondary-600: var(--vt-c-delicious_dill-600);
+  --color-secondary-900: var(--vt-c-delicious_dill-900);
+  --color-secondary-400: var(--vt-c-delicious_dill-400);
+  --color-secondary-300: var(--vt-c-delicious_dill-300);
+  --color-secondary-200: var(--vt-c-delicious_dill-200);
+  --color-secondary-100: var(--vt-c-delicious_dill-100);
+  --color-secondary-50: var(--vt-c-delicious_dill-50);
+
+  --color-background: var(--vt-c-white);
+  --color-background-soft: var(--vt-c-white-soft);
+  --color-background-mute: var(--vt-c-white-mute);
+
+  --color-border: var(--vt-c-divider-light-2);
+  --color-border-hover: var(--vt-c-divider-light-1);
+
+  --color-heading: var(--vt-c-text-light-1);
+  --color-text: var(--vt-c-text-light-1);
+
+  --section-gap: 160px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--vt-c-white);
+    --color-background-soft: var(--vt-c-white-soft);
+    --color-background-mute: var(--vt-c-white-mute);
+
+    --color-border: var(--vt-c-divider-light-2);
+    --color-border-hover: var(--vt-c-divider-light-1);
+
+    --color-heading: var(--vt-c-text-light-1);
+    --color-text: var(--vt-c-text-light-1);
+
+    --section-gap: 160px;
+  }
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+a {
+  text-decoration: none;
+}
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+
+  line-height: 1.6;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

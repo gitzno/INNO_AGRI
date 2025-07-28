@@ -1,0 +1,20 @@
+/*  Heading */
+:root {
+  --heading--text-4xl: 700 36px/40px 'Roboto';
+  --heading--text-3xl: 700 30px/36px 'Roboto';
+  --heading--text-2xl: 700 24px/32px 'Roboto';
+  --heading--text-xl: 700 20px/28px 'Roboto';
+  --heading--text-lg: 700 18px/28px 'Roboto';
+  --heading--text-base: 700 16px/24px 'Roboto';
+  --heading--text-sm: 700 14px/20px 'Roboto';
+  --heading--text-xs: 700 12px/16px 'Roboto';
+}
+/* CONTENT*/
+
+:root {
+  --text-xl: 400 20px/28px 'Roboto';
+  --text-lg: 400 18px/28px 'Roboto';
+  --text-base: 400 16px/24px 'Roboto';
+  --text-sm: 400 14px/20px 'Roboto';
+  --text-xs: 400 12px/16px 'Roboto';
+}
