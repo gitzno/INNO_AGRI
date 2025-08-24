@@ -5,14 +5,17 @@ import Button from 'primevue/button'
   <div class="bg_homepage">
     <div class="main_homepage">
       <div class="layer layer_1_hp">
-        <img class="contain" src="/src/assets/backgrounds/background.png" alt="Sky" />
+        <img class="contain" src="/src/assets/backgrounds/BackgroundSky.png" alt="background" />
       </div>
       <div class="layer layer_2_hp">
-        <img class="contain" src="/src/assets/backgrounds/moutain.png" alt="Sky" />
+        <img  class="contain" src="/src/assets/backgrounds/moutain.png" alt="moutain" />
+      </div>
+      <div class="layer layer_2_hp">
+        <img  style="margin-bottom: 50px;" class="contain" src="/src/assets/backgrounds/farmer.png" alt="farmer" />
       </div>
       <div class="layer layer_3_hp">
-        <div class="cover object">
-          <img class="contain" src="/src/assets/backgrounds/people_bg.png" alt="Nông dân" />
+        <div class="cover">
+          <img class="contain" src="/src/assets/backgrounds/paddy.png" alt="Nông dân" />
         </div>
       </div>
 
@@ -42,9 +45,11 @@ export default {}
 .bg_homepage {
   border-radius: 0 0 20px 20px;
   min-height: 100vh;
+  width: 100vw;
   overflow: hidden;
 }
 .main_homepage {
+  width: 100vw;
   min-height: 100vh;
   background-color: aqua;
   position: relative;
@@ -110,8 +115,8 @@ export default {}
 }
 .button_homepage button {
   margin-top: 20px;
-  background-color: var(--color-secondary-400);
+  background-color: var(--vt-c-delicious_dill-900);
   border: none;
-  color: var(--vt-c-neutral-800);
+  color: whitesmoke;
 }
 </style>

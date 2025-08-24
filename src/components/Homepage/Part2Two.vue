@@ -1,8 +1,6 @@
 <template>
   <div class="bg_part2">
-    <div class="layer layer_1_hp">
-      <img src="@/assets/backgrounds/house_bg.png" alt="Mountain Background" />
-    </div>
+
     <div class="layer layer_2_hp">
       <div class="circle-bg">
         <div class="circle circle_left"></div>
@@ -11,8 +9,12 @@
     </div>
     <div class="layer layer_3_hp">
       <div class="container container_left">
-        <div class="frame_circle frame_sup"></div>
-        <div class="frame_circle"></div>
+        <div class="frame_circle" @click="isHovered = 2" :class="{ frame_sup: isHovered == 2 }">
+
+        </div>
+        <div class="frame_circle" @click="isHovered = 1" :class="{ frame_sup: isHovered == 1 }">
+          
+        </div>
       </div>
       <div class="container container_right">
         <div class="heading_1">Giới thiệu về chúng tôi</div>
@@ -21,7 +23,7 @@
           Là đơn vị tiên phong trong lĩnh vực nông nghiệp bền vững tại Việt Nam. Inno-Agri hướng tới
           trở thành cầu nối công nghệ nông nghiệp tiên tiến từ Nhật Bản và Hàn Quốc đến Việt Nam,
           với sứ mệnh bảo vệ môi trường, nâng cao tri thức cộng đồng, và cải thiện chất lượng sống
-          cho người nông dân. Các công nghệ nổi bật gồm:
+          cho người nông dân.
         </div>
         <div class="list_item">
           <ul>
@@ -44,12 +46,24 @@
   </div>
 </template>
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      isHovered: 1,
+    }
+  },
+}
 </script>
 <style scoped>
 .frame_sup {
+  transition:
+    width 1s ease-in-out,
+    height 1s ease-in-out,
+    margin-right 1s ease-in-out,
+    margin-bottom 1s ease-in-out;
+  margin-bottom: 400px;
   z-index: 5 !important;
-  margin-right: 500px;
+  margin-right: 550px;
   background-color: blueviolet !important;
   height: 400px !important;
   width: 400px !important;
@@ -84,10 +98,12 @@ export default {}
   margin: 15px 0;
 }
 .heading_1 {
-  font: var(--heading--text-xl);
+  font: var( --heading--text-3xl);
+  color: var(--vt-c-neutral-600);
 }
 .heading_2 {
   margin: 20px 0;
+  font-size: 64px;
   font: var(--heading--text-4xl);
   color: var(--color-main);
 }
@@ -102,10 +118,16 @@ export default {}
   display: flex;
 }
 .layer_3_hp .frame_circle {
+  transition:
+    width 1s ease-in-out,
+    height 1s ease-in-out,
+    margin-right 1s ease-in-out,
+    margin-bottom 1s ease-in-out,
+    background-color 0.5s ease-in-out;
   position: absolute;
   background-color: aqua;
-  width: 500px;
-  height: 500px;
+  width: 750px;
+  height: 750px;
   border-radius: 100%;
 
   z-index: 4;
@@ -161,7 +183,7 @@ export default {}
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-color: var(--vt-c-accent-500);
+    background-color: var(--vt-c-delicious_dill-300);
     position: absolute;
     transform: translate(-50%, -50%);
   }

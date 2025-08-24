@@ -1,22 +1,47 @@
 <script setup>
 import LogoINNO from '@/components/LogoINNO.vue'
+import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 </script>
 <template>
   <div class="bg_nav">
     <div class="nav_bar">
-      <div><LogoINNO /></div>
-      <div><router-link to="/" title="Trang chủ">Trang chủ</router-link></div>
-      <div><router-link to="/about" title="Về chúng tôi">Về chúng tôi</router-link></div>
-      <div><router-link to="/project" title="Dự án">Dự án</router-link></div>
-      <div><router-link to="/news" title="Tin tức">Tin tức</router-link></div>
-      <div><router-link tơ="/contacts" title="Liên hệ">Liên hệ</router-link></div>
+      <div class="pl">
+        <div>
+          <router-link to="/about" :title="t('AboutUs')">{{ t('AboutUs') }}</router-link>
+        </div>
+        <div>
+          <router-link to="/projects" :title="t('Projects')">{{ t('Projects') }}</router-link>
+        </div>
+      </div>
+
+      <div class="pm">
+        <router-link to="/" :title="t('HomePage')"><LogoINNO /></router-link>
+      </div>
+      <div class="pr">
+        <div>
+          <router-link to="/news" :title="t('News')">{{ t('News') }}</router-link>
+        </div>
+        <div>
+          <router-link to="/contacts" :title="t('Contacts')">{{ t('Contacts') }}</router-link>
+        </div>
+      </div>
     </div>
+    <LanguageSwitcher />
   </div>
 </template>
 <script>
-export default {}
+
+export default {
+
+}
 </script>
 <style scoped>
+.pm {
+  padding: 20px 20px;
+}
 .bg_nav {
   z-index: 2000;
   position: sticky;
@@ -37,7 +62,7 @@ export default {}
   padding: 15px;
   border-radius: 0 0 20px 20px;
 }
-.nav_bar > div {
+.nav_bar > div > div {
   font: var(--heading--text-2xl);
   margin: 50px;
   display: inline-block;

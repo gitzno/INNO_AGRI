@@ -1,8 +1,10 @@
 @import './base.css';
 @import './font.css';
+@import 'tailwindcss';
+@import 'tailwindcss-primeui';
 
+@import 'primeicons/primeicons.css';
 #app {
-  min-width: 1440px;
   margin: 0 auto;
   font-weight: normal;
 }
