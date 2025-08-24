@@ -9,13 +9,6 @@ import FooterView from './views/FooterView.vue'
     <NavBar />
     <RouterView />
     <FooterView />
-    <iframe
-      src="https://bumpy-mule-101.notion.site/ebd/1a8f440e69ce80ad98e5c8446bf63783"
-      width="100%"
-      height="600"
-      frameborder="0"
-      allowfullscreen
-    />
   </div>
 </template>
 
@@ -23,5 +16,7 @@ import FooterView from './views/FooterView.vue'
 .bg_page {
   background-color: rgb(255, 255, 255);
   min-height: 200vh;
+  max-width: 100vw;
+
 }
 </style>
