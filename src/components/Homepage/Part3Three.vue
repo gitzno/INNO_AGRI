@@ -44,13 +44,10 @@ export default {
       opacity: 1,
       duration: 3,
       y: 200,
-
       scrollTrigger: {
-        trigger: '.video', // Trigger sẽ bắt đầu khi cuộn đến div này
-        start: 'bottom', // Bắt đầu khi phần dưới cùng của div nằm ở dưới cùng viewport
-        end: 'top', // Kết thúc khi phần trên cùng của div nằm ở trên cùng viewport
+        trigger: '.content_video', // Trigger sẽ bắt đầu khi cuộn đến div này
+        start: 'top', // Bắt đầu khi phần dưới cùng của div nằm ở dưới cùng viewport
         toggleActions: 'play none none reverse', // Khi cuộn vào thì chạy animation, khi cuộn ra thì đảo ngược lại
-        markers: true, // Thêm markers để dễ debug (bạn có thể xóa khi hoàn thành)
       },
     })
     gsap.to('.youtube-embed', {
@@ -60,11 +57,11 @@ export default {
       height: '80%',
       borderRadius: '30px',
       scrollTrigger: {
-        trigger: '.video',
-        start: 'bottom center',
+        trigger: '.content_video',
+        start: 'top center ',
         // Bắt đầu khi phần trên cùng của div nằm ở giữa viewport
-        toggleActions: 'play none none reverse', // Khi cuộn vào thì chạy animation, khi cuộn ra thì đảo ngược lại
-        markers: true, // Thêm markers để dễ debug (bạn có thể xóa khi hoàn thành)
+        toggleActions: 'restart none none reverse', // Khi cuộn vào thì chạy animation, khi cuộn ra thì đảo ngược lại
+        markers: false, // Thêm markers để dễ debug (bạn có thể xóa khi hoàn thành)
       },
     })
     // gsap.to('.video', {
@@ -96,12 +93,12 @@ export default {
   opacity: 0;
   align-items: center;
   justify-content: center;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   position: absolute;
 }
 .bg_video {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   overflow: hidden;
 }
@@ -125,11 +122,30 @@ export default {
   color: var(--vt-c-neutral-800);
   font: var(--text-xl);
   text-align: center;
+  margin: 20px;
 }
 .header-3 {
+  text-align: center;
   font: var(--heading--text-4xl);
   color: var(--vt-c-green-900);
   margin: 50px 0;
   font-size: 64px;
+}
+@media (max-width: 1024px) {
+  .header-3 {
+    font-size: 40px;
+    text-align: center;
+    margin: 20px;
+  }
+  .content-3 {
+    font: var(--text-lg);
+    margin: 0 20px;
+  }
+  .youtube-embed {
+    width: 90%;
+    height: auto;
+    border-radius: 20px;
+  }
+
 }
 </style>

@@ -8,30 +8,27 @@
         những trải nghiệm hoàn toàn mới
       </div>
     </div>
-    <div class="partner">
-      <div class="logoPatner">
-        <img src="/src/assets/partnerLogo/Denso.png" alt="" />
+    <div class="partner" style="margin-bottom: 120px">
+      <div
+        class="slider"
+        style="width: 100%; display: flex; flex-wrap: wrap; justify-content: center"
+      >
+        <SliderImage />
       </div>
-      <div class="logoPatner">
-        <img src="/src/assets/partnerLogo/Feager.png" alt="" />
-      </div>
-      <div class="logoPatner">
-        <img src="/src/assets/partnerLogo/Inoue.png" alt="" />
-      </div>
-      <div class="logoPatner">
-        <img src="/src/assets/partnerLogo/Sofix.png" alt="" />
-      </div>
-      <div class="logoPatner">
-        <img src="/src/assets/partnerLogo/ThanhPhat.png" alt="" />
-      </div>
-      <div class="logoPatner">
-        <img src="/src/assets/partnerLogo/Xuanxuan.png" alt="" />
+      <div class="content-3" style="padding-top: 80px">
+        Và rất nhiều các đối tác khác trong và ngoài nước...
       </div>
     </div>
+    <ContactView style="margin-bottom: 100px; width: 100%; "/>
   </div>
 </template>
 <script>
-export default {}
+import ContactView from '@/views/ContactView.vue'
+import SliderImage from '../SliderImage.vue'
+
+export default {
+  components: { SliderImage, ContactView },
+}
 </script>
 <style scoped>
 .partner {

@@ -9,10 +9,26 @@
         hướng tới cải thiện bla bla của người nông dân
       </div>
       <div class="bg-card">
-        <CardHomePage />
-        <CardHomePage />
-        <CardHomePage />
-        <CardHomePage />
+        <CardHomePage
+          title="Dự án SOFIX"
+          content="Chẩn đoán sức khỏe đất bằng công nghệ vi sinh Nhật Bản, giúp tái tạo đất, nâng cao hiệu quả canh tác và thúc đẩy nông nghiệp tuần hoàn."
+          linkImg="https://firebasestorage.googleapis.com/v0/b/fushipment.appspot.com/o/product%2F%E1%BA%A2nh%20c%E1%BB%A7a%20Th%E1%BB%A5y%2Fd%E1%BB%B1%20%C3%A1n%201.jpg?alt=media&token=f17d2f7d-57c6-4871-b5a6-babc62d0107f"
+        />
+        <CardHomePage
+          title="Dự án JCM"
+          content="Ứng dụng phương pháp AWD trên lúa nước để giảm phát thải khí nhà kính, hướng đến mục tiêu Net Zero và tham gia thị trường tín chỉ các-bon quốc tế."
+          linkImg="https://firebasestorage.googleapis.com/v0/b/fushipment.appspot.com/o/product%2F%E1%BA%A2nh%20c%E1%BB%A7a%20Th%E1%BB%A5y%2Fproject-v-2.jpg?alt=media&token=f17d2f7d-57c6-4871-b5a6-babc62d0107f"
+        />
+        <CardHomePage
+          title="Dự án Biochar"
+          content="Ứng dụng phương pháp AWD trên lúa nước để giảm phát thải khí nhà kính, hướng đến mục tiêu Net Zero và tham gia thị trường tín chỉ các-bon quốc tế."
+          linkImg="https://firebasestorage.googleapis.com/v0/b/fushipment.appspot.com/o/product%2F%E1%BA%A2nh%20c%E1%BB%A7a%20Th%E1%BB%A5y%2Fproject-v-2.jpg?alt=media&token=f17d2f7d-57c6-4871-b5a6-babc62d0107f"
+        />
+        <CardHomePage
+          title="Dự án SOFIX"
+          content="Chẩn đoán sức khỏe đất bằng công nghệ vi sinh Nhật Bản, giúp tái tạo đất, nâng cao hiệu quả canh tác và thúc đẩy nông nghiệp tuần hoàn."
+          linkImg="https://firebasestorage.googleapis.com/v0/b/fushipment.appspot.com/o/product%2F%E1%BA%A2nh%20c%E1%BB%A7a%20Th%E1%BB%A5y%2Fd%E1%BB%B1%20%C3%A1n%201.jpg?alt=media&token=f17d2f7d-57c6-4871-b5a6-babc62d0107f"
+        />
       </div>
     </div>
   </div>
@@ -41,18 +57,24 @@ export default {
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin: 100px 0;
 }
 .content-3 {
   color: var(--vt-c-neutral-800);
   font: var(--text-xl);
   text-align: center;
-  margin: 0 50px;
+  margin: 20px 50px;
 }
 .header-3 {
   font: var(--heading--text-4xl);
   color: var(--vt-c-green-900);
   margin: 50px 0;
   font-size: 64px;
+  text-align: center;
+}
+@media (max-width: 1024px) {
+  .header-3 {
+    font-size: 45px;
+    margin: 20px 0;
+  }
 }
 </style>

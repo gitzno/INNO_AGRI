@@ -2,7 +2,7 @@
   <div class="card_bg">
     <div class="card">
       <div class="layer img-layer">
-        <img src="/src/assets/backgrounds/project-v-2.jpg" alt="Card Image" class="card-image" />
+        <img :src="linkImg" alt="Card Image" class="card-image" />
       </div>
       <div class="layer content_layer">
         <div class="header">{{ this.title }}</div>
@@ -34,6 +34,7 @@ export default {
 <style scoped>
 .card_bg {
   margin: 30px;
+  width: 20%;
 }
 .card {
   position: relative;

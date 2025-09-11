@@ -28,14 +28,56 @@ const { t } = useI18n()
           <router-link to="/contacts" :title="t('Contacts')">{{ t('Contacts') }}</router-link>
         </div>
       </div>
+      <LanguageSwitcher />
     </div>
-    <LanguageSwitcher />
   </div>
 </template>
 <script>
-
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
+gsap.registerPlugin(ScrollTrigger)
 export default {
-
+  methods: {
+    setupNav(newPath) {
+      if (newPath == '/') {
+        gsap.to('.nav_bar >  *:not(.pm)', {
+          opacity: 0,
+          backgroundColor: 'rgba(255, 255, 255, 0);',
+          scrollTrigger: {
+            trigger: '.bg_nav',
+            start: 'top top+=100vh',
+            toggleActions: 'play reverse play reverse',
+            onEnter: () => {
+              gsap.to('.nav_bar', { backgroundColor: 'rgba(255, 255, 255, 0.4);', duration: 0.3 })
+            },
+            onLeaveBack: () => {
+              gsap.to('.nav_bar', { backgroundColor: 'rgba(255, 255, 255, 0.4);', duration: 0.3 })
+            },
+          },
+        })
+      } else {
+        console.log(ScrollTrigger.getAll())
+        // Kiểm tra xem có sự kiện ScrollTrigger nào đang hoạt động không
+        if (ScrollTrigger.getAll().length == 0) {
+          console.log('Có sự kiện ScrollTrigger đang hoạt động.')
+        } else {
+          ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
+          gsap.set('.nav_bar', { clearProps: 'all' })
+        }
+      }
+    },
+  },
+  mounted() {
+    this.setupNav(this.$route.path)
+    this.$watch(
+      () => this.$route.path,
+      (newPath, oldPath) => {
+        oldPath
+        this.setupNav(newPath)
+        // Place any additional logic you want to run on route change here
+      },
+    )
+  },
 }
 </script>
 <style scoped>
@@ -53,7 +95,7 @@ export default {
 }
 .nav_bar {
   backdrop-filter: blur(10px);
-  background-color: rgba(255, 255, 255, 0.4);
+  /* background-color: rgba(255, 255, 255, 0.4); */
   height: 100%;
   width: 100%;
   display: flex;
