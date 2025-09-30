@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div class="bg-content">
     <div class="content">
       <div class="header-3">Hợp tác và phát triển bền vững</div>
       <div class="content-3">
         Với mong muốn đem đến cho thị trường những sản phẩm - dịch vụ theo tiêu chuẩn quốc tế và
-        những trải nghiệm hoàn toàn mới <br />
+        những trải nghiệm hoàn toàn mới
         Inno Agri liên tục đổi mới cách làm nông nghiệp, tiên phong dẫn đầu xu hướng ngành nông
         hướng tới cải thiện bla bla của người nông dân
       </div>
@@ -43,20 +43,25 @@ export default {
 }
 </script>
 <style scoped>
+.bg-content{
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fffcf2;
+}
 .bg-card {
   justify-content: center;
   align-items: center;
   margin: 70px;
-  display: flex;
   width: 100%;
 }
 .content {
-  background-color: #fffcf2;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 1280px;
 }
 .content-3 {
   color: var(--vt-c-neutral-800);

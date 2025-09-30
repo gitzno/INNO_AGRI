@@ -207,6 +207,9 @@ table .header_item {
     /* background-color: lightcoral; */
     position: relative;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
   }
   .layer {
     width: 100%;

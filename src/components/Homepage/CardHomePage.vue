@@ -33,16 +33,15 @@ export default {
 </script>
 <style scoped>
 .card_bg {
-  margin: 30px;
-  width: 20%;
+  margin: 10px;
 }
 .card {
   position: relative;
   border-radius: 25px;
   overflow: hidden;
   background-color: #006f1c;
-  height: 492px;
-  width: 380px;
+  height: 452px;
+  width: 300px;
 }
 .card img {
   width: 100%;
@@ -64,8 +63,8 @@ export default {
 .layer {
   cursor: pointer;
   position: absolute;
-  height: 492px;
-  width: 380px;
+  height: 452px;
+  width: 300px;
 }
 .header {
   font: var(--heading--text-2xl);
