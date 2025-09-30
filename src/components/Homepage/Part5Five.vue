@@ -51,6 +51,7 @@ export default {
   background-color: #fffcf2;
 }
 .bg-card {
+  display: ruby;
   justify-content: center;
   align-items: center;
   margin: 70px;
