@@ -1,57 +1,90 @@
-<script setup>
-import Button from 'primevue/button'
-</script>
+<script setup></script>
 <template>
   <div class="bg_homepage">
     <div class="main_homepage">
       <div class="layer layer_1_hp">
-        <img class="contain" src="/src/assets/backgrounds/background.png" alt="Sky" />
+        <img
+          class="contain"
+          src="https://res.cloudinary.com/dvavgtmdr/image/upload/v1757436435/N%C3%BAi_900KB_ce1gxt.jpg"
+          alt="background"
+        />
       </div>
+
       <div class="layer layer_2_hp">
-        <img class="contain" src="/src/assets/backgrounds/moutain.png" alt="Sky" />
+        <img
+          style="bottom: -150px; position: absolute"
+          src="https://res.cloudinary.com/dvavgtmdr/image/upload/v1757436435/Ndan_357KB_yl0hju.png"
+          class="contain"
+          alt="farmer"
+        />
       </div>
       <div class="layer layer_3_hp">
-        <div class="cover object">
-          <img class="contain" src="/src/assets/backgrounds/people_bg.png" alt="Nông dân" />
+        <div class="cover">
+          <img
+            style="width: 100vw"
+            class="contain"
+            src="https://res.cloudinary.com/dvavgtmdr/image/upload/v1757436435/C%E1%BB%8F_424KB_h7zmr0.png"
+            alt="Lúa"
+          />
         </div>
       </div>
 
       <div class="layer layer_4_hp"></div>
       <div class="layer layer_5_hp">
         <div class="content_hp">
-          <div class="header-homepage">Bạn có biết</div>
-          <div class="content-homepage">
-            Sức khỏe cây trồng bắt đầu từ chính sức khỏe của đất.<br />
-            Nhưng hơn 70% đất nông nghiệp tại Việt Nam đang dần thoái hóa.<br />
-            Inno-Agri mang đến những giải pháp công nghệ từ Nhật Bản và Hàn Quốc để tái tạo đất,
-            giảm phát thải, và kiến tạo một nền nông nghiệp xanh – vì sức khỏe cộng đồng và tương
-            lai bền vững.
+          <div class="header-homepage" style="text-shadow: 2px 2px #888888">INNOAGRI</div>
+          <div class="content-homepage" style="text-shadow: 2px 2px #888888">
+            Tiên phong <br />
+            Nông nghiệp bền vững
           </div>
-          <div class="button_homepage">
-            <Button label="Tìm hiểu thêm" icon="pi pi-arrow-circle-right" iconPos="right" />
-          </div>
+          <div class="button_homepage"></div>
         </div>
       </div>
     </div>
   </div>
 </template>
 <script>
-export default {}
+import gsap from 'gsap'
+export default {
+  mounted() {
+    let tl = gsap.timeline()
+
+    // Split the header and content text into lines or chars if needed
+    const header = this.$el.querySelector('.header-homepage')
+    const content = this.$el.querySelector('.content-homepage')
+    const imgFarmer = this.$el.querySelector('.layer_1_hp')
+    const fei = this.$el.querySelector('.layer_3_hp')
+    // Optional: Split text for animation effect
+    // const splitHeader = new SplitText(header, { type: "chars" })
+    // const splitContent = new SplitText(content, { type: "chars" })
+
+    // Set initial state
+    gsap.set([header, content], { opacity: 0, y: 50 })
+    gsap.set(imgFarmer, { scale: 1.5 })
+    gsap.set(fei, { y: 50 })
+    // Add animations to timeline
+    tl.to(header, { opacity: 1, y: 0, duration: 1, ease: 'power2.out' })
+    tl.to(imgFarmer, { scale: 1, duration: 2, ease: 'power2.out' }, '-=1')
+    tl.to(content, { opacity: 1, y: 0, duration: 2, ease: 'power2.out' }, '-=1')
+    tl.to(fei, { x: 0, y: 0, duration: 2.4, ease: 'power2.out' }, '-=3')
+  },
+}
 </script>
 <style scoped>
 .bg_homepage {
   border-radius: 0 0 20px 20px;
   min-height: 100vh;
+  width: 100%;
   overflow: hidden;
 }
 .main_homepage {
+  width: 100%;
   min-height: 100vh;
-  background-color: aqua;
   position: relative;
   display: flex;
 }
 .layer {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   position: absolute;
   top: 0;
@@ -83,35 +116,45 @@ export default {}
   background: linear-gradient(
     180deg,
     rgba(42, 123, 155, 0) 0%,
-    rgba(248, 251, 252, 0) 83%,
+    rgba(248, 251, 252, 0) 93%,
     rgba(255, 255, 255, 1) 100%
   );
   z-index: 4;
 }
 .layer_5_hp {
   z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .content_hp {
-  width: 530px;
-  margin-top: 100px;
-  margin-left: 100px;
+  min-width: 90vw;
+  height: 100vh;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+}
+.content_hp > div {
+  line-height: 1.2;
 }
 .header-homepage {
-  font: var(--heading--text-4xl);
-  color: var(--color-main);
+  color: white;
+  font-size: 128px;
+  font-weight: bold;
 }
 .content-homepage {
-  margin-top: 20px;
-  font: var(--heading--text-base);
-  color: var(--vt-c-neutral-700);
+  color: white;
+  font-size: 48px;
+  font-weight: semi-bold;
 }
 .button_homepage {
   margin-top: 20px;
 }
 .button_homepage button {
   margin-top: 20px;
-  background-color: var(--color-secondary-400);
+  background-color: var(--vt-c-delicious_dill-900);
   border: none;
-  color: var(--vt-c-neutral-800);
+  color: whitesmoke;
 }
 </style>

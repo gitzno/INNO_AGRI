@@ -1,12 +1,11 @@
 /* color palette from <https://github.com/vuejs/theme> */
 :root {
-  --vt-c-accent-500: #EFBC00;
-  --vt-c-accent-400: #F2C933;
-  --vt-c-accent-300: #F4D254;
-  --vt-c-accent-200: #F8E08A;
-  --vt-c-accent-100: #FAEAB0;
-  --vt-c-accent-50: #FDF8E6;
-
+  --vt-c-accent-500: #efbc00;
+  --vt-c-accent-400: #f2c933;
+  --vt-c-accent-300: #f4d254;
+  --vt-c-accent-200: #f8e08a;
+  --vt-c-accent-100: #faeab0;
+  --vt-c-accent-50: #fdf8e6;
 
   --vt-c-green-900: #006f1c;
   --vt-c-green-800: #38922e;
@@ -126,15 +125,17 @@
 a {
   text-decoration: none;
 }
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 body {
   min-height: 100vh;
   color: var(--color-text);
   background: var(--color-background);
 
   line-height: 1.6;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 15px;
-  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
+

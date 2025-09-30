@@ -1,20 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 /*  Heading */
 :root {
-  --heading--text-4xl: 700 36px/40px 'Roboto';
-  --heading--text-3xl: 700 30px/36px 'Roboto';
-  --heading--text-2xl: 700 24px/32px 'Roboto';
-  --heading--text-xl: 700 20px/28px 'Roboto';
-  --heading--text-lg: 700 18px/28px 'Roboto';
-  --heading--text-base: 700 16px/24px 'Roboto';
-  --heading--text-sm: 700 14px/20px 'Roboto';
-  --heading--text-xs: 700 12px/16px 'Roboto';
+  --heading--text-4xl: 700 64px/70px 'Be Vietnam Pro';
+  --heading--text-3xl: 700 30px/36px 'Be Vietnam Pro';
+  --heading--text-2xl: 700 24px/32px 'Be Vietnam Pro';
+  --heading--text-xl: 700 20px/28px 'Be Vietnam Pro';
+  --heading--text-lg: 700 18px/28px 'Be Vietnam Pro';
+  --heading--text-base: 700 16px/24px 'Be Vietnam Pro';
+  --heading--text-sm: 700 14px/20px 'Be Vietnam Pro';
+  --heading--text-xs: 700 12px/16px 'Be Vietnam Pro';
 }
 /* CONTENT*/
 
 :root {
-  --text-xl: 400 20px/28px 'Roboto';
-  --text-lg: 400 18px/28px 'Roboto';
-  --text-base: 400 16px/24px 'Roboto';
-  --text-sm: 400 14px/20px 'Roboto';
-  --text-xs: 400 12px/16px 'Roboto';
+  --text-xl: 400 20px/28px 'Be Vietnam Pro';
+  --text-lg: 400 18px/28px 'Be Vietnam Pro';
+  --text-base: 400 16px/24px 'Be Vietnam Pro';
+  --text-sm: 400 14px/20px 'Be Vietnam Pro';
+  --text-xs: 400 12px/16px 'Be Vietnam Pro';
 }

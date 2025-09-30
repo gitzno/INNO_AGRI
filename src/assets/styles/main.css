@@ -1,8 +1,9 @@
 @import './base.css';
 @import './font.css';
-
+@import 'tailwindcss';
+@import 'tailwindcss-primeui';
+@import 'primeicons/primeicons.css';
 #app {
-  min-width: 1440px;
   margin: 0 auto;
   font-weight: normal;
 }
@@ -15,8 +16,21 @@ body {
   background-color: var(--color-background);
   /* demo */
   place-items: center;
+  position: absolute;
+}
+/* Ẩn scrollbar trên Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  display: none;
 }
 
-#app {
-  display: grid;
+/* Ẩn scrollbar trên Firefox */
+* {
+  scrollbar-width: none; /* Ẩn hoàn toàn */
+  -ms-overflow-style: none; /* IE, Edge cũ */
 }
+
+/* Vẫn giữ khả năng cuộn */
+body {
+  overflow: auto;
+}
+

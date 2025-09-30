@@ -1,22 +1,89 @@
 <script setup>
 import LogoINNO from '@/components/LogoINNO.vue'
+import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 </script>
 <template>
   <div class="bg_nav">
     <div class="nav_bar">
-      <div><LogoINNO /></div>
-      <div><router-link to="/" title="Trang chủ">Trang chủ</router-link></div>
-      <div><router-link to="/about" title="Về chúng tôi">Về chúng tôi</router-link></div>
-      <div><router-link to="/project" title="Dự án">Dự án</router-link></div>
-      <div><router-link to="/news" title="Tin tức">Tin tức</router-link></div>
-      <div><router-link tơ="/contacts" title="Liên hệ">Liên hệ</router-link></div>
+      <div class="pl">
+        <div>
+          <router-link to="/about" :title="t('AboutUs')">{{ t('AboutUs') }}</router-link>
+        </div>
+        <div>
+          <router-link to="/projects" :title="t('Projects')">{{ t('Projects') }}</router-link>
+        </div>
+      </div>
+
+      <div class="pm">
+        <router-link to="/" :title="t('HomePage')"><LogoINNO /></router-link>
+      </div>
+      <div class="pr">
+        <div>
+          <router-link to="/news" :title="t('News')">{{ t('News') }}</router-link>
+        </div>
+        <div>
+          <router-link to="/contacts" :title="t('Contacts')">{{ t('Contacts') }}</router-link>
+        </div>
+      </div>
+      <LanguageSwitcher />
     </div>
   </div>
 </template>
 <script>
-export default {}
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
+gsap.registerPlugin(ScrollTrigger)
+export default {
+  methods: {
+    setupNav(newPath) {
+      if (newPath == '/') {
+        gsap.to('.nav_bar >  *:not(.pm)', {
+          opacity: 0,
+          backgroundColor: 'rgba(255, 255, 255, 0);',
+          scrollTrigger: {
+            trigger: '.bg_nav',
+            start: 'top top+=100vh',
+            toggleActions: 'play reverse play reverse',
+            onEnter: () => {
+              gsap.to('.nav_bar', { backgroundColor: 'rgba(255, 255, 255, 0.4);', duration: 0.3 })
+            },
+            onLeaveBack: () => {
+              gsap.to('.nav_bar', { backgroundColor: 'rgba(255, 255, 255, 0.4);', duration: 0.3 })
+            },
+          },
+        })
+      } else {
+        console.log(ScrollTrigger.getAll())
+        // Kiểm tra xem có sự kiện ScrollTrigger nào đang hoạt động không
+        if (ScrollTrigger.getAll().length == 0) {
+          console.log('Có sự kiện ScrollTrigger đang hoạt động.')
+        } else {
+          ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
+          gsap.set('.nav_bar', { clearProps: 'all' })
+        }
+      }
+    },
+  },
+  mounted() {
+    this.setupNav(this.$route.path)
+    this.$watch(
+      () => this.$route.path,
+      (newPath, oldPath) => {
+        oldPath
+        this.setupNav(newPath)
+        // Place any additional logic you want to run on route change here
+      },
+    )
+  },
+}
 </script>
 <style scoped>
+.pm {
+  padding: 20px 20px;
+}
 .bg_nav {
   z-index: 2000;
   position: sticky;
@@ -28,7 +95,7 @@ export default {}
 }
 .nav_bar {
   backdrop-filter: blur(10px);
-  background-color: rgba(255, 255, 255, 0.4);
+  /* background-color: rgba(255, 255, 255, 0.4); */
   height: 100%;
   width: 100%;
   display: flex;
@@ -37,7 +104,7 @@ export default {}
   padding: 15px;
   border-radius: 0 0 20px 20px;
 }
-.nav_bar > div {
+.nav_bar > div > div {
   font: var(--heading--text-2xl);
   margin: 50px;
   display: inline-block;
