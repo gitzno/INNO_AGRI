@@ -22,7 +22,7 @@
 
 @media (max-width: 1280px) {
   :root {
-    --heading--text-4xl: 700 64px/70px 'Be Vietnam Pro';
+    --heading--text-4xl: 700 40px/50px 'Be Vietnam Pro' !important;
     --heading--text-3xl: 700 30px/36px 'Be Vietnam Pro';
     --heading--text-2xl: 700 24px/32px 'Be Vietnam Pro';
     --heading--text-xl: 700 20px/28px 'Be Vietnam Pro';

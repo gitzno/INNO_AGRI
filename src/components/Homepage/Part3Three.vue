@@ -129,7 +129,6 @@ export default {
   font: var(--heading--text-4xl);
   color: var(--vt-c-green-900);
   margin: 50px 0;
-  font-size: 64px;
 }
 @media (max-width: 1024px) {
   .header-3 {
