@@ -17,7 +17,7 @@
         <div class="content_video">
           <iframe
             class="youtube-embed"
-            src="https://www.youtube.com/watch?v=2cbmd3V0gb0"
+            src="https://www.youtube.com/embed/2cbmd3V0gb0?si=Iymq3Uvd8vXqaZDL"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
