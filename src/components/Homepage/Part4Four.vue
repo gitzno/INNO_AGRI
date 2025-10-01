@@ -256,7 +256,6 @@ li {
 }
 .bg_content {
   height: 100vh;
-  overflow: hidden;
 }
 .bg_four {
   background-color: var(--color-secondary-300);
@@ -264,6 +263,7 @@ li {
   justify-content: center;
   align-items: center;
   width: 100%;
+  overflow: hidden;
 }
 .left_content {
   width: 50%;
