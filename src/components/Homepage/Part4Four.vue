@@ -8,10 +8,12 @@
         align-items: center;
         width: 100%;
         height: 100vh;
+        overflow: hidden;
       "
     >
       <img
-        style="height: 100%; opacity: 0.1"
+
+        style="height: 100%; opacity: 0.1; width: 100%;"
         src="https://firebasestorage.googleapis.com/v0/b/fushipment.appspot.com/o/product%2F%E1%BA%A2nh%20c%E1%BB%A7a%20Th%E1%BB%A5y%2FN%E1%BB%81n%20Map.png?alt=media&token=f17d2f7d-57c6-4871-b5a6-babc62d0107f"
         alt="cánh đồng"
       />
