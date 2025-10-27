@@ -10,7 +10,6 @@ const { t } = useI18n()
     <label class="menu__btn" for="menu__toggle">
       <span></span>
     </label>
-    <LanguageSwitcher class="ls" />
 
     <ul class="menu__box">
       <li>

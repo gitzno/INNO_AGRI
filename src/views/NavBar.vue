@@ -147,5 +147,8 @@ export default {
   .bg_nav {
     width: 100vw;
   }
+  .pm{
+    
+  }
 }
 </style>
