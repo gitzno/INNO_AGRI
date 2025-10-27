@@ -12,7 +12,7 @@
       <div class="video">
         <div class="bg_video">
           <div class="layer-2"></div>
-          <img src="/src/assets/backgrounds/bgMap.png" alt="Video Background" />
+          <img class="bgMap" src="/src/assets/backgrounds/bgMap.png" alt="Video Background" />
         </div>
         <div class="content_video">
           <iframe
@@ -145,6 +145,12 @@ export default {
     height: auto;
     border-radius: 20px;
   }
+}
 
+@media screen and (max-width: 1300px) {
+  .bgMap {
+    max-width: fit-content;
+    height: 100%;
+  }
 }
 </style>

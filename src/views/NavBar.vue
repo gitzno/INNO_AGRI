@@ -8,6 +8,7 @@ const { t } = useI18n()
 <template>
   <div class="bg_nav">
     <div class="nav_bar">
+      <HamburgerMenu class="pz"/>
       <div class="pl">
         <div>
           <router-link to="/about" :title="t('AboutUs')">{{ t('AboutUs') }}</router-link>
@@ -28,13 +29,14 @@ const { t } = useI18n()
           <router-link to="/contacts" :title="t('Contacts')">{{ t('Contacts') }}</router-link>
         </div>
       </div>
-      <LanguageSwitcher />
+      <LanguageSwitcher class="ls" />
     </div>
   </div>
 </template>
 <script>
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
+import HamburgerMenu from '@/components/HamburgerMenu.vue'
 gsap.registerPlugin(ScrollTrigger)
 export default {
   methods: {
@@ -81,6 +83,9 @@ export default {
 }
 </script>
 <style scoped>
+.pz{
+  display: none;
+}
 .pm {
   padding: 20px 20px;
 }
@@ -94,8 +99,8 @@ export default {
   justify-content: center;
 }
 .nav_bar {
-  backdrop-filter: blur(10px);
-  /* background-color: rgba(255, 255, 255, 0.4); */
+  /* backdrop-filter: blur(10px); */
+  background-color: var(--vt-c-accent-50);
   height: 100%;
   width: 100%;
   display: flex;
@@ -118,7 +123,7 @@ export default {
   /* border: 3px solid black; */
   /* font-weight: 900; */
   padding-bottom: 10px;
-  border-bottom: 4px solid var(--color-secondary-400);
+  border-bottom: 4px solid var(--vt-c-accent-500);
   transition: border-bottom 0.1s linear 0s;
 }
 .nav_bar a::before {
@@ -128,5 +133,19 @@ export default {
   height: 0;
   overflow: hidden;
   visibility: hidden;
+}
+@media screen and (max-width: 1300px) {
+  .pl,
+  .pr,
+  .ls {
+    display: none !important;
+  }
+
+  .pz{
+    display: contents;
+  }
+  .bg_nav {
+    width: 100vw;
+  }
 }
 </style>

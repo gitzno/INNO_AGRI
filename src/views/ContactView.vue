@@ -1,5 +1,5 @@
 <template>
-  <div class="bg_project" style="width: 100vw ;margin-top: 200px; margin-bottom: 120px;">
+  <div class="bg_project" style="width: 100vw; margin-top: 200px; margin-bottom: 120px">
     <div class="text-conent-1" style="width: 100%">
       <div class="big-text" @click="handleClickZ">{{ contentHeader }}</div>
       <div class="mini_content bounce-char" @click="handleClick">{{ contentBtn }}</div>
@@ -228,5 +228,17 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+@media (max-width: 1300px) {
+  label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  label > div {
+    width: 100% !important;
+    margin: 10px 0;
+  }
 }
 </style>

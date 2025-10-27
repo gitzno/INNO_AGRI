@@ -10,7 +10,7 @@
           <div class="location">Email: email@gmail.com</div>
         </div>
       </div>
-      <div class="columnFooter">
+      <div class="columnFooter mininavZ">
         <ul>
           <li>Trang chủ</li>
           <li>Về chúng tôi</li>
@@ -86,16 +86,51 @@ export default {}
   font: var(--heading--text-4xl);
   color: var(--color-main);
 }
-.headerCar{
+.headerCar {
   font-weight: bold;
 }
-.cardVisit > div{
+.cardVisit > div {
   margin: 10px;
 }
-.columnFooter ul{
+.columnFooter ul {
   margin-left: 40px;
 }
-.columnFooter ul li{
+.columnFooter ul li {
   margin: 15px;
+}
+
+@media screen and (max-width: 1300px) {
+  .bg_footer {
+    width: 100vw;
+  }
+  .footerTop {
+    width: 100%;
+    padding: 20px;
+    height: auto;
+    flex-direction: column-reverse;
+  }
+  .mininavZ > ul {
+    display: flex;
+    margin-left: 0px;
+  }
+  .mininavZ > ul > li {
+    font-size: 13px;
+  }
+  .footerTop > div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cardVisit {
+    display: flex;
+    flex-direction: column;
+  }
+  .cardVisit >div{
+    text-align: center;
+  }
+  .bg_footer{
+    height: auto;
+  }
 }
 </style>

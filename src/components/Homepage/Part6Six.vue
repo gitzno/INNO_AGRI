@@ -19,7 +19,7 @@
         Và rất nhiều các đối tác khác trong và ngoài nước...
       </div>
     </div>
-    <ContactView style="margin-bottom: 100px; width: 100%; "/>
+    <ContactView style="margin-bottom: 100px; width: 100%" />
   </div>
 </template>
 <script>
@@ -72,5 +72,20 @@ export default {
   color: var(--vt-c-green-900);
   margin: 50px 0;
   font-size: 64px;
+}
+@media (max-width: 1300px) {
+  .header-3,
+  .content-3 {
+    width: 100vw;
+    margin: 50px 50px !important;
+  }
+  .bg-card {
+    display: flex;
+    flex-direction: column;
+  }
+  .header-3 {
+    font-size: 35px;
+    text-align: center;
+  }
 }
 </style>

@@ -4,7 +4,7 @@
     <div class="main_homepage">
       <div class="layer layer_1_hp">
         <img
-          class="contain"
+          class="contain containZ"
           src="https://res.cloudinary.com/dvavgtmdr/image/upload/v1757436435/N%C3%BAi_900KB_ce1gxt.jpg"
           alt="background"
         />
@@ -103,6 +103,7 @@ export default {
   z-index: 3;
   display: flex;
 }
+
 .layer_3_hp .contain {
   display: block;
 }
@@ -156,5 +157,31 @@ export default {
   background-color: var(--vt-c-delicious_dill-900);
   border: none;
   color: whitesmoke;
+}
+@media screen and (max-width: 800px) {
+  .contain {
+    max-width: fit-content !important;
+  }
+}
+@media screen and (min-width: 800px) and (max-width: 1300px) {
+  .contain {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .layer_1_hp {
+    display: flex;
+  }
+  .header-homepage {
+    width: 100vw;
+    text-align: center;
+    font-size: 60px;
+  }
+  .content-homepage {
+    width: 100vw;
+    text-align: center;
+
+    font-size: 30px;
+  }
 }
 </style>

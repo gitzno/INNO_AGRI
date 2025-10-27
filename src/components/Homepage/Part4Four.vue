@@ -12,14 +12,13 @@
       "
     >
       <img
-
-        style="height: 100%; opacity: 0.1; width: 100%;"
+        style="height: 100%; opacity: 0.1; width: 100%"
         src="https://firebasestorage.googleapis.com/v0/b/fushipment.appspot.com/o/product%2F%E1%BA%A2nh%20c%E1%BB%A7a%20Th%E1%BB%A5y%2FN%E1%BB%81n%20Map.png?alt=media&token=f17d2f7d-57c6-4871-b5a6-babc62d0107f"
         alt="cánh đồng"
       />
     </div>
     <div class="bg_content left_content">
-      <div class="frame_img" style="margin-left: 300px; margin-top: 100px;">
+      <div class="frame_img" style="margin-left: 300px; margin-top: 100px">
         <div class="bg_layer">
           <div class="layer layer-1">
             <img src="/src/assets/backgrounds/Vietnam_location_map.png" alt="" />
@@ -84,7 +83,7 @@
         </div>
       </div>
     </div>
-    <div class="bg_content right_content">
+    <div class="bg_content right_content" style="margin-left: 50px">
       <ul>
         <li class="li_active hanoi">
           <i
@@ -132,7 +131,7 @@
               margin-right: 15px;
             "
           ></i
-          >Nghê An
+          >Nghệ An
         </li>
         <li class="li_active hatinh">
           <i
@@ -288,5 +287,17 @@ li {
 .frame_img img {
   width: 100%;
   height: 100%;
+}
+@media screen and (max-width: 1300px) {
+  .left_content {
+    display: none;
+  }
+  .right_content {
+    width: 100%;
+    margin-left: 0px;
+  }
+  .bg_four{
+    height: auto !important;
+  }
 }
 </style>

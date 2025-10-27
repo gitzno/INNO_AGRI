@@ -4,31 +4,35 @@
       <div class="header-3">Hợp tác và phát triển bền vững</div>
       <div class="content-3">
         Với mong muốn đem đến cho thị trường những sản phẩm - dịch vụ theo tiêu chuẩn quốc tế và
-        những trải nghiệm hoàn toàn mới
-        Inno Agri liên tục đổi mới cách làm nông nghiệp, tiên phong dẫn đầu xu hướng ngành nông
-        hướng tới cải thiện bla bla của người nông dân
+        những trải nghiệm hoàn toàn mới Inno Agri liên tục đổi mới cách làm nông nghiệp, tiên phong
+        dẫn đầu xu hướng ngành nông hướng tới cải thiện bla bla của người nông dân
       </div>
       <div class="bg-card">
-        <CardHomePage
-          title="Dự án SOFIX"
-          content="Chẩn đoán sức khỏe đất bằng công nghệ vi sinh Nhật Bản, giúp tái tạo đất, nâng cao hiệu quả canh tác và thúc đẩy nông nghiệp tuần hoàn."
-          linkImg="https://firebasestorage.googleapis.com/v0/b/fushipment.appspot.com/o/product%2F%E1%BA%A2nh%20c%E1%BB%A7a%20Th%E1%BB%A5y%2Fd%E1%BB%B1%20%C3%A1n%201.jpg?alt=media&token=f17d2f7d-57c6-4871-b5a6-babc62d0107f"
-        />
-        <CardHomePage
-          title="Dự án JCM"
-          content="Ứng dụng phương pháp AWD trên lúa nước để giảm phát thải khí nhà kính, hướng đến mục tiêu Net Zero và tham gia thị trường tín chỉ các-bon quốc tế."
-          linkImg="https://firebasestorage.googleapis.com/v0/b/fushipment.appspot.com/o/product%2F%E1%BA%A2nh%20c%E1%BB%A7a%20Th%E1%BB%A5y%2Fproject-v-2.jpg?alt=media&token=f17d2f7d-57c6-4871-b5a6-babc62d0107f"
-        />
-        <CardHomePage
-          title="Dự án Biochar"
-          content="Ứng dụng phương pháp AWD trên lúa nước để giảm phát thải khí nhà kính, hướng đến mục tiêu Net Zero và tham gia thị trường tín chỉ các-bon quốc tế."
-          linkImg="https://firebasestorage.googleapis.com/v0/b/fushipment.appspot.com/o/product%2F%E1%BA%A2nh%20c%E1%BB%A7a%20Th%E1%BB%A5y%2Fproject-v-2.jpg?alt=media&token=f17d2f7d-57c6-4871-b5a6-babc62d0107f"
-        />
-        <CardHomePage
-          title="Dự án SOFIX"
-          content="Chẩn đoán sức khỏe đất bằng công nghệ vi sinh Nhật Bản, giúp tái tạo đất, nâng cao hiệu quả canh tác và thúc đẩy nông nghiệp tuần hoàn."
-          linkImg="https://firebasestorage.googleapis.com/v0/b/fushipment.appspot.com/o/product%2F%E1%BA%A2nh%20c%E1%BB%A7a%20Th%E1%BB%A5y%2Fd%E1%BB%B1%20%C3%A1n%201.jpg?alt=media&token=f17d2f7d-57c6-4871-b5a6-babc62d0107f"
-        />
+        <div class="bg-card1">
+          <CardHomePage
+            title="Dự án SOFIX"
+            content="Chẩn đoán sức khỏe đất bằng công nghệ vi sinh Nhật Bản, giúp tái tạo đất, nâng cao hiệu quả canh tác và thúc đẩy nông nghiệp tuần hoàn."
+            linkImg="https://firebasestorage.googleapis.com/v0/b/fushipment.appspot.com/o/product%2F%E1%BA%A2nh%20c%E1%BB%A7a%20Th%E1%BB%A5y%2Fd%E1%BB%B1%20%C3%A1n%201.jpg?alt=media&token=f17d2f7d-57c6-4871-b5a6-babc62d0107f"
+          />
+          <CardHomePage
+            title="Dự án JCM"
+            content="Ứng dụng phương pháp AWD trên lúa nước để giảm phát thải khí nhà kính, hướng đến mục tiêu Net Zero và tham gia thị trường tín chỉ các-bon quốc tế."
+            linkImg="https://firebasestorage.googleapis.com/v0/b/fushipment.appspot.com/o/product%2F%E1%BA%A2nh%20c%E1%BB%A7a%20Th%E1%BB%A5y%2Fproject-v-2.jpg?alt=media&token=f17d2f7d-57c6-4871-b5a6-babc62d0107f"
+          />
+        </div>
+
+        <div class="bg-card1">
+          <CardHomePage
+            title="Dự án Biochar"
+            content="Ứng dụng phương pháp AWD trên lúa nước để giảm phát thải khí nhà kính, hướng đến mục tiêu Net Zero và tham gia thị trường tín chỉ các-bon quốc tế."
+            linkImg="https://firebasestorage.googleapis.com/v0/b/fushipment.appspot.com/o/product%2F%E1%BA%A2nh%20c%E1%BB%A7a%20Th%E1%BB%A5y%2Fproject-v-2.jpg?alt=media&token=f17d2f7d-57c6-4871-b5a6-babc62d0107f"
+          />
+          <CardHomePage
+            title="Dự án SOFIX"
+            content="Chẩn đoán sức khỏe đất bằng công nghệ vi sinh Nhật Bản, giúp tái tạo đất, nâng cao hiệu quả canh tác và thúc đẩy nông nghiệp tuần hoàn."
+            linkImg="https://firebasestorage.googleapis.com/v0/b/fushipment.appspot.com/o/product%2F%E1%BA%A2nh%20c%E1%BB%A7a%20Th%E1%BB%A5y%2Fd%E1%BB%B1%20%C3%A1n%201.jpg?alt=media&token=f17d2f7d-57c6-4871-b5a6-babc62d0107f"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -43,8 +47,11 @@ export default {
 }
 </script>
 <style scoped>
-.bg-content{
-   display: flex;
+.bg-card1{
+  display: flex;
+}
+.bg-content {
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -81,6 +88,32 @@ export default {
   .header-3 {
     font-size: 45px;
     margin: 20px 0;
+  }
+}
+@media (max-width: 600px) {
+  .bg-card1 {
+    display: flex;
+    flex-direction: column !important;
+  }
+}
+@media (max-width: 1300px) {
+  .bg-card {
+    display: flex;
+    flex-direction: column;
+  }
+  .bg-card > .bg-card1 {
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media (max-width: 800px) {
+  .header-3,
+  .content-3 {
+    width: 100vw;
+  }
+  .bg-card {
+    display: flex;
+    flex-direction: column;
   }
 }
 </style>
